@@ -1,2 +1,5 @@
 /.idea/
+/target/
 /spring-websockets-notification-system.iml
+
+/ng-app/node_modules/

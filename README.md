@@ -1,2 +1,3 @@
 # spring-websockets-notification-system
-WebSocket-based notifications system using Spring
+
+This is an example project that has been written to support the "WebSocket-based Notification System using Spring" tutorial post on [codesandnotes.be](codesandnotes.be).

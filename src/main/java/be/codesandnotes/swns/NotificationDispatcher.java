@@ -6,7 +6,6 @@ import org.springframework.context.event.EventListener;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.messaging.simp.SimpMessageType;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
-import org.springframework.messaging.simp.annotation.SendToUser;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.web.socket.messaging.SessionDisconnectEvent;
@@ -35,7 +34,6 @@ public class NotificationDispatcher {
         listeners.remove(sessionId);
     }
 
-    @SendToUser
     @Scheduled(fixedDelay = 2000)
     public void dispatch() {
         for (String listener : listeners) {
@@ -47,7 +45,8 @@ public class NotificationDispatcher {
 
             int value = (int) Math.round(Math.random() * 100d);
             template.convertAndSendToUser(
-                    listener, "/notification/item",
+                    listener,
+                    "/notification/item",
                     new Notification(Integer.toString(value)),
                     headerAccessor.getMessageHeaders());
         }

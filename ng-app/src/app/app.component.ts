@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'Spring Websockets Notification System';
+  title = 'Spring WebSocket Notification System';
 }

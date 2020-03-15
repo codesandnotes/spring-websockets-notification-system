@@ -1,2 +1,2 @@
 # spring-websockets-notification-system
-Websocket-based notifications system using Spring
+WebSocket-based notifications system using Spring

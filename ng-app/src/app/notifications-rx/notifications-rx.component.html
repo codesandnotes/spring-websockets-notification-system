@@ -1,0 +1,14 @@
+
+<div>
+  <button type="button" (click)="connectClicked()">Connect</button>
+  <button type="button" (click)="disconnectClicked()">Disconnect</button>
+</div>
+
+<div>
+  <button type="button" (click)="startClicked()">Start listening</button>
+  <button type="button" (click)="stopClicked()">Stop listening</button>
+</div>
+
+<div>
+  <span *ngFor="let notification of notifications">{{notification}} </span>
+</div>
